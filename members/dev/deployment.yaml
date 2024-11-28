@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: members-deployment
+  namespace: space-place
+spec:
+  template:
+    metadata:
+      namespace: space-place
+    spec:
+      containers:
+      - name: members-container
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:a513e76ebcdb30412a4caec53aaa9f29be9e3432
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 50m
+          limits:
+            memory: 256Mi
+            cpu: 50m
