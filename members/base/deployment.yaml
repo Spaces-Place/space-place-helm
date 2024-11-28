@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: members-deployment
+  namespace: space-place
+  labels:
+    app.kubernetes.io/name: main-members-deployment 
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: space-place
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: main-members-pod
+  template:
+    metadata:
+      namespace: space-place
+      labels:
+        app.kubernetes.io/component: backend
+        app.kubernetes.io/version: v1
+        app.kubernetes.io/name: main-members-pod 
+    spec:
+      serviceAccountName: aws-credentials-serviceaccount
+      containers:
+      - name: members-container
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:latest
+          # image: nginx 
+        volumeMounts:
+          - name: secret-volume
+            mountPath: /etc/secret-volume
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 50m
+          limits:
+            memory: 256Mi
+            cpu: 50m
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: aws-credentials
