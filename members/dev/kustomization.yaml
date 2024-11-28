@@ -9,15 +9,15 @@ patches:
   - path: service.yaml
     target:
       kind: Service
-      name: dev-main-members-service
+      name: members-service
       namespace: space-place
   - path: hpa.yaml
     target:
       kind: HorizontailPodAutoscaler
-      name: dev-main-members-hpa
+      name: members-hpa
       namespace: space-place
   - path: deployment.yaml
     target:
       kind: Deployment
-      name: dev-main-members-deployment
+      name: members-deployment
       namespace: space-place
