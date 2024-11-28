@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: members-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:a513e76ebcdb30412a4caec53aaa9f29be9e3432
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:da4933d1ec102f250102b4e4eb3810b3105623ec
         resources:
           requests:
             memory: 256Mi
