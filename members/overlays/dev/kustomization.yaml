@@ -10,4 +10,17 @@ patches:
   - path: hpa.yaml
     target:
       kind: HorizontalPodAutoscaler
-      name: nginx-deployment
+      name: main-members-hpa
+      namespace: space-place
+  - path: deployment.yaml
+    target: 
+      kind: Deployment
+      name: main-members-deployment
+      namespace: space-place
+  - path: service.yaml
+    target:
+      kind: Service
+      name: main-members-service
+      namespace: space-place
+    
+
