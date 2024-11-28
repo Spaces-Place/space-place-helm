@@ -1,5 +1,4 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
+namePrefix: dev-
 commonLabels:
   app.kubernetes.io/part-of: space-place
   app.kubernetes.io/envrionment: dev 
@@ -7,20 +6,18 @@ commonLabels:
 resources:
   - ../../base
 patches:
-  - path: hpa.yaml
-    target:
-      kind: HorizontalPodAutoscaler
-      name: main-members-hpa
-      namespace: space-place
-  - path: deployment.yaml
-    target: 
-      kind: Deployment
-      name: main-members-deployment
-      namespace: space-place
   - path: service.yaml
     target:
       kind: Service
-      name: main-members-service
+      name: dev-main-members-service
       namespace: space-place
-    
-
+  - path: hpa.yaml
+    target:
+      kind: HorizontailPodAutoscaler
+      name: dev-main-members-hpa
+      namespace: space-place
+  - path: deployment.yaml
+    target:
+      kind: Deployment
+      name: dev-main-members-deployment
+      namespace: space-place
