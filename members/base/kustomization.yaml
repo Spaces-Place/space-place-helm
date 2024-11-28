@@ -1,4 +1,3 @@
-namePrefix: main-
 commonLabels:
   app.kubernetes.io/part-of: space-place
   app.kubernetes.io/envrionment: main
