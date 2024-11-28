@@ -1,0 +1,8 @@
+commonLabels:
+  app.kubernetes.io/part-of: space-place
+  app.kubernetes.io/envrionment: dev 
+  app.kubernetes.io/version: "0.1"
+resources:
+- deployment.yaml
+- service.yaml
+- hpa.yaml
