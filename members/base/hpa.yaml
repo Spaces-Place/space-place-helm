@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: main-members-deployment
+  name: main-members-hpa
   namespace: space-place
 spec:
   scaleTargetRef:
