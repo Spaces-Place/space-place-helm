@@ -22,8 +22,8 @@ spec:
       serviceAccountName: aws-credentials-serviceaccount
       containers:
       - name: members-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:latest
-          # image: nginx 
+        image: spaces-place/members:6a271dbd7f2368eca5d3800a74c90761a6b5fb68
+          # image: spaces-place/members:6a271dbd7f2368eca5d3800a74c90761a6b5fb68
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
