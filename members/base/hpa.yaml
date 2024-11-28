@@ -1,13 +1,13 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: main-members-hpa
+  name: members-hpa
   namespace: space-place
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: main-members-deployment # deployment의 metadata.name과 매칭된다.
+    name: members-deployment # deployment의 metadata.name과 매칭된다.
   minReplicas: 1
   maxReplicas: 5
   metrics:

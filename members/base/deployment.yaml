@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main-members-deployment
+  name: members-deployment
   namespace: space-place
   labels:
-    app.kubernetes.io/name: main-members-deployment 
+    app.kubernetes.io/name: members-deployment 
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: space-place
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: main-members-pod
+      app.kubernetes.io/name: members-pod
   template:
     metadata:
       namespace: space-place
       labels:
         app.kubernetes.io/component: backend
         app.kubernetes.io/version: v1
-        app.kubernetes.io/name: main-members-pod 
+        app.kubernetes.io/name: members-pod 
     spec:
       serviceAccountName: aws-credentials-serviceaccount
       containers:
