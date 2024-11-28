@@ -4,7 +4,7 @@ commonLabels:
   app.kubernetes.io/envrionment: dev 
   app.kubernetes.io/version: "0.1"
 resources:
-  - ../main/base
+  - ../main
 patches:
   - path: service.yaml
     target:
