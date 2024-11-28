@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: members-deployment
+  name: main-members-deployment
   namespace: space-place
   labels:
     app.kubernetes.io/name: main-members-deployment 
