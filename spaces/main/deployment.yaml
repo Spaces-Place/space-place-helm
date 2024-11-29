@@ -22,8 +22,8 @@ spec:
       serviceAccountName: aws-credentials-serviceaccount
       containers:
       - name: spaces-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:e85fc4d8361a92d9340c159cd2cf48f3627df635
-          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:e85fc4d8361a92d9340c159cd2cf48f3627df635
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:1f15f057f19dc6feac2eeb85e9c5ca33c02beef6
+          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:1f15f057f19dc6feac2eeb85e9c5ca33c02beef6
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
