@@ -27,6 +27,8 @@ spec:
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
+          - name: ca
+            mountPath: /etc/ssl/certs/global-bundle.pem
         ports:
         - containerPort: 80
         readinessProbe:
@@ -52,3 +54,6 @@ spec:
         - name: secret-volume
           secret:
             secretName: aws-credentials
+        - name: ca
+          secret:
+            secretName: ca
