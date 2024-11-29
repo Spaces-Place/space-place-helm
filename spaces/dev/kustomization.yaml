@@ -5,17 +5,17 @@ patches:
 - path: service.yaml
   target:
     kind: Service
-    name: members-service
+    name: spaces-service
     namespace: space-place
 - path: hpa.yaml
   target:
     kind: HorizontailPodAutoscaler
-    name: members-hpa
+    name: spaces-hpa
     namespace: space-place
 - path: deployment.yaml
   target:
     kind: Deployment
-    name: members-deployment
+    name: spaces-deployment
     namespace: space-place
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
