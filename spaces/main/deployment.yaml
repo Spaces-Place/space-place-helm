@@ -28,7 +28,7 @@ spec:
           - name: secret-volume
             mountPath: /etc/secret-volume
           - name: ca
-            mountPath: /etc/ssl/certs/global-bundle.pem
+            mountPath: /etc/ssl/certs
         ports:
         - containerPort: 80
         readinessProbe:
