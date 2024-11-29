@@ -18,3 +18,13 @@ spec:
           limits:
             memory: 256Mi
             cpu: 50m
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 35
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
