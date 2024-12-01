@@ -19,9 +19,8 @@ spec:
             memory: 256Mi
             cpu: 50m
         readinessProbe:
-          httpGet:
           initialDelaySeconds: 45
           periodSeconds: 5
         livenessProbe:
-          httpGet:
-            port: 80
+          initialDelaySeconds: 45
+          periodSeconds: 5
