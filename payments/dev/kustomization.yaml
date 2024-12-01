@@ -1,0 +1,27 @@
+namePrefix: dev-
+resources:
+- ../main
+patches:
+- path: service.yaml
+  target:
+    kind: Service
+    name: payments-service
+    namespace: space-place
+- path: hpa.yaml
+  target:
+    kind: HorizontailPodAutoscaler
+    name: payments-hpa
+    namespace: space-place
+- path: deployment.yaml
+  target:
+    kind: Deployment
+    name: payments-deployment
+    namespace: space-place
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/envrionment: dev
+    app.kubernetes.io/part-of: space-place
+    app.kubernetes.io/version: "0.1"
