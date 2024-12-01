@@ -22,7 +22,7 @@ spec:
       serviceAccountName: aws-credentials-serviceaccount
       containers:
       - name: reservations-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:4df61907a43984e308a0836e8164fa5f06cd9169
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:6b9c447cd5869ed717c8cb39df6550911a5ccdc2
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
