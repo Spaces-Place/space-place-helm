@@ -22,7 +22,7 @@ spec:
       serviceAccountName: aws-credentials-serviceaccount
       containers:
       - name: payments-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:6e246c657203cad252a5a1c56c7589ef33990e36
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:a003f680f6ffea192b2044467744bfefca5f3062
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
