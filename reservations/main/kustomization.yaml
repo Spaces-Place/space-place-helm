@@ -1,0 +1,12 @@
+resources:
+- deployment.yaml
+- service.yaml
+- hpa.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/envrionment: main
+    app.kubernetes.io/part-of: space-place
+    app.kubernetes.io/version: "0.1"
