@@ -13,11 +13,11 @@ spec:
         image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:b6d254ae4c00002543ff919a67f767068a773075
         resources:
           requests:
-            memory: 256Mi
-            cpu: 50m
+            memory: 512Mi
+            cpu: 100m
           limits:
-            memory: 256Mi
-            cpu: 50m
+            memory: 512Mi
+            cpu: 100m
         readinessProbe:
           initialDelaySeconds: 45
           periodSeconds: 5
