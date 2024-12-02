@@ -20,6 +20,17 @@ spec:
         app.kubernetes.io/name: spaces-pod 
     spec:
       serviceAccountName: aws-credentials-serviceaccount
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: eks.amazonaws.com/nodegroup
+                operator: In
+                values:
+                - sp-general
+                - sp-spot
+
       containers:
       - name: spaces-container
         image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:4a23f2f11ab51b00b2eb9243c3e7fc76b7152ef3

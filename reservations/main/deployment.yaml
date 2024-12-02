@@ -20,6 +20,16 @@ spec:
         app.kubernetes.io/name: reservations-pod 
     spec:
       serviceAccountName: aws-credentials-serviceaccount
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: eks.amazonaws.com/nodegroup
+                operator: In
+                values:
+                - sp-general
+                - sp-spot
       containers:
       - name: reservations-container
         image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:347c5ad082d815f04e3735a67b42670f6308a7fa

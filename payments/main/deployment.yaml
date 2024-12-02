@@ -20,6 +20,16 @@ spec:
         app.kubernetes.io/name: payments-pod 
     spec:
       serviceAccountName: aws-credentials-serviceaccount
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: eks.amazonaws.com/nodegroup
+                operator: In
+                values:
+                - sp-general
+                - sp-spot
       containers:
       - name: payments-container
         image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:a003f680f6ffea192b2044467744bfefca5f3062
