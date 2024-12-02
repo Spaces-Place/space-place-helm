@@ -20,6 +20,8 @@ spec:
         app.kubernetes.io/name: members-pod 
     spec:
       serviceAccountName: aws-credentials-serviceaccount
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: test
       containers:
       - name: members-container
         image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:547565bfb2a1489a726ad074cc05f21c948c9008
