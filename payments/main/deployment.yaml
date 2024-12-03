@@ -32,7 +32,7 @@ spec:
                 - sp-spot
       containers:
       - name: payments-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:e32a7685a14b1075719f3b15c1aa114299f48650
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:bbe313e3c9b622e5fa135038184ba969aae28a54
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
