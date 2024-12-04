@@ -32,7 +32,7 @@ spec:
                 - sp-spot
       containers:
       - name: reservations-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:1000d70f94ff8e5fa53601672de7c90fd70b1768
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:018e8d71b2f419436013cf38b09738f7fac042fb
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
