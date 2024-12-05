@@ -32,8 +32,8 @@ spec:
                 - sp-spot
       containers:
       - name: members-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:549ff220e48455aa5427f82777780aee48abc50c
-          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:549ff220e48455aa5427f82777780aee48abc50c
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:63375f5e54558e3619e12955c5c180cf8880de38
+          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/member:63375f5e54558e3619e12955c5c180cf8880de38
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
