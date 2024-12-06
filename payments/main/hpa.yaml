@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: payments-deployment # deployment의 metadata.name과 매칭된다.
   minReplicas: 2
-  maxReplicas: 5
+  maxReplicas: 7
   metrics:
     - type: Resource
       resource:
