@@ -8,7 +8,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: payments-deployment # deployment의 metadata.name과 매칭된다.
-  minReplicas: 5
+  minReplicas: 2
   maxReplicas: 15
   metrics:
     - type: Resource
