@@ -54,10 +54,10 @@ spec:
         resources:
           requests:
             memory: 256Mi
-            cpu: 1500m
+            cpu: 500m
           limits:
             memory: 256Mi
-            cpu: 1500m
+            cpu: 500m
       volumes:
         - name: secret-volume
           secret:
