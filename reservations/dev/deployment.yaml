@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: reservations-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:5984d142ba3f33bb107809e7c14000442c4a6925
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/reservation:fc7004c8af702679c865e27d2b9f897e6a0e9085
         resources:
           requests:
             memory: 512Mi
