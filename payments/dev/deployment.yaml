@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: payments-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:47606d4d06be716a99d704ee389ee86e78f3c1b6
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/payment:a8cef2514601202114b61974e5723373bc803fed
         resources:
           requests:
             memory: 512Mi
