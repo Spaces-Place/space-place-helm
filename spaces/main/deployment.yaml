@@ -33,8 +33,8 @@ spec:
 
       containers:
       - name: spaces-container
-        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:2f5731a293cc61ff9e4ca42e1b7a378c3a01f2a5
-          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:2f5731a293cc61ff9e4ca42e1b7a378c3a01f2a5
+        image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:e5ddc81caab17aa9b8ec7885ca3ef582b7d3fe3e
+          # image: 148761649775.dkr.ecr.ap-northeast-2.amazonaws.com/space-place/space:e5ddc81caab17aa9b8ec7885ca3ef582b7d3fe3e
         volumeMounts:
           - name: secret-volume
             mountPath: /etc/secret-volume
