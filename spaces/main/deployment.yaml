@@ -56,11 +56,11 @@ spec:
           periodSeconds: 5
         resources:
           requests:
-            memory: 512Mi
             cpu: 500m
+            memory: 256Mi
           limits:
-            memory: 512Mi
             cpu: 500m
+            memory: 256Mi
       volumes:
         - name: secret-volume
           secret:
